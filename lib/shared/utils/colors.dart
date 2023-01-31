@@ -16,8 +16,6 @@ ColorScheme colorScheme = const ColorScheme(
   onBackground: Color(0xffffffff),
 );
 
-TextTheme textTheme = TextTheme();
-
 ThemeData themeData = ThemeData(
   colorScheme: colorScheme,
 );
