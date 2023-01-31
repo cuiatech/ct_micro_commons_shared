@@ -12,4 +12,14 @@ class LocalStorage {
     final prefs = await SharedPreferences.getInstance();
     return await prefs.setString(key, value);
   }
+
+  static Future<bool> remove(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    return await prefs.remove(key);
+  }
+
+  static Future<bool> erase() async {
+    final prefs = await SharedPreferences.getInstance();
+    return await prefs.clear();
+  }
 }

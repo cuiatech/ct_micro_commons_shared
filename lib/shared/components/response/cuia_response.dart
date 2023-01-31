@@ -8,4 +8,7 @@ class CuiaResponse {
   final bool success;
   final dynamic data;
   String? message;
+
+  @override
+  String toString() => "(success: $success, data: $data, message: $message)";
 }
