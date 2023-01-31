@@ -18,8 +18,11 @@ class CuiaIcons extends StatelessWidget {
         path: "/assets/icons/Shape.png",
       );
 
-  static Widget support() => const CuiaIcons(
-        path: "/assets/icons/Support.png",
+  static Widget support({bool white = false, double? size}) => CuiaIcons(
+        path: white
+            ? "/assets/icons/Suport_white.png"
+            : "/assets/icons/Support.png",
+        size: size ?? 18,
       );
 
   @override
