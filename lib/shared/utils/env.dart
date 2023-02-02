@@ -1,8 +1,8 @@
 class Env {
   static EnvParams dev() => EnvParams(
         baseUrl: 'http://localhost/cuiatech_api',
-        clientId: '984ffd9e-31a5-4da2-bffa-b625ad76836b',
-        clientSecret: 'W0nprTh1B41mRXyxRIormKJ9cwALwQiAoSu7wV58',
+        clientId: '985bb51e-0869-4d79-8865-ae1ca6f9aa81',
+        clientSecret: 'qJrwUdDm2GwJVFc15pR5nLEZzXuVCU6kvyl9jNiV',
       );
 
   static EnvParams prod() => EnvParams(
