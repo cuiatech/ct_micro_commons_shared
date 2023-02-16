@@ -1,7 +1,7 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
-import 'package:flut_micro_commons_dependencies/flut_micro_commons_dependencies.dart';
+import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart';
 
 class CuiaLogo extends StatelessWidget {
   const CuiaLogo({
@@ -14,7 +14,7 @@ class CuiaLogo extends StatelessWidget {
       children: [
         Image.asset(
           'assets/images/cuiatech_logo.png',
-          package: 'flut_micro_commons_shared',
+          package: 'ct_micro_commons_shared',
           width: 104,
         ),
         const SizedBox(height: 20),
@@ -37,7 +37,7 @@ class CuiaLogo extends StatelessWidget {
       children: [
         Image.asset(
           'assets/images/cuiatech_logo.png',
-          package: 'flut_micro_commons_shared',
+          package: 'ct_micro_commons_shared',
           width: width ?? 104,
         ),
         const SizedBox(width: 10),

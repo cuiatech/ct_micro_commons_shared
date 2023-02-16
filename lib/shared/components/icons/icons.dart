@@ -30,7 +30,7 @@ class CuiaIcons extends StatelessWidget {
     return Image.asset(
       path,
       width: size,
-      package: 'flut_micro_commons_shared',
+      package: 'ct_micro_commons_shared',
     );
   }
 }
