@@ -10,10 +10,10 @@ class AppDto {
   late String imageUrl;
   late String distributor;
   late bool activated;
-  String? createdAt;
-  String? updatedAt;
-
+  late DateTime createdAt;
+  late DateTime updatedAt;
   List<AppReleaseDto>? releases;
+  late bool hasAccess;
 
   AppDto({
     required this.id,
@@ -25,8 +25,9 @@ class AppDto {
     required this.imageUrl,
     required this.distributor,
     required this.activated,
-    this.createdAt,
-    this.updatedAt,
+    required this.createdAt,
+    required this.updatedAt,
+    required this.hasAccess,
     this.releases,
   });
 
@@ -40,14 +41,15 @@ class AppDto {
     imageUrl = json['image_url'];
     distributor = json['distributor'];
     activated = (json['activated'] ?? 0) == 1;
-    createdAt = json['created_at'];
-    updatedAt = json['updated_at'];
+    createdAt = DateTime.parse(json['created_at']);
+    updatedAt = DateTime.parse(json['updated_at']);
     if (json['app_releases'] != null) {
       releases = <AppReleaseDto>[];
       json['app_releases'].forEach((v) {
         releases!.add(AppReleaseDto.fromJson(v));
       });
     }
+    hasAccess = (json['has_access'] ?? 0) == 1;
   }
 
   Map<String, dynamic> toJson() {
@@ -64,6 +66,7 @@ class AppDto {
       'created_at': createdAt,
       'updated_at': updatedAt,
       'app_releases': releases?.map((v) => v.toJson()).toList(),
+      'has_access': hasAccess,
     };
   }
 }
