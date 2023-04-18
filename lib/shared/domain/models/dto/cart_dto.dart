@@ -1,6 +1,6 @@
-import 'package:ct_micro_commons_shared/shared/domain/models/dto/order_item_dto.dart';
+import 'package:ct_micro_commons_shared/ct_micro_commons_shared.dart';
 
-class OrderDto {
+class CartDto {
   int? id;
   int? paymentDetailId;
   int? discountId;
@@ -11,7 +11,7 @@ class OrderDto {
   String? updatedAt;
   List<OrderItemDto>? orderItems;
 
-  OrderDto(
+  CartDto(
       {this.id,
       this.paymentDetailId,
       this.discountId,
@@ -22,7 +22,7 @@ class OrderDto {
       this.updatedAt,
       this.orderItems});
 
-  OrderDto.fromJson(Map<String, dynamic> json) {
+  CartDto.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     paymentDetailId = json['payment_detail_id'];
     discountId = json['discount_id'];
@@ -49,8 +49,7 @@ class OrderDto {
       'status': status,
       'created_at': createdAt,
       'updated_at': updatedAt,
-      if (orderItems != null)
-        'order_items': orderItems!.map((v) => v.toJson()).toList(),
+      'order_items': orderItems?.map((v) => v.toJson()).toList(),
     };
   }
 }

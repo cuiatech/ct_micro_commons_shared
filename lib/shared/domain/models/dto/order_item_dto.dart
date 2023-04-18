@@ -1,4 +1,4 @@
-class OrderItem {
+class OrderItemDto {
   int? id;
   int? orderId;
   int? appId;
@@ -9,7 +9,7 @@ class OrderItem {
   String? createdAt;
   String? updatedAt;
 
-  OrderItem(
+  OrderItemDto(
       {this.id,
       this.orderId,
       this.appId,
@@ -20,7 +20,7 @@ class OrderItem {
       this.createdAt,
       this.updatedAt});
 
-  OrderItem.fromJson(Map<String, dynamic> json) {
+  OrderItemDto.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     orderId = json['order_id'];
     appId = json['app_id'];
